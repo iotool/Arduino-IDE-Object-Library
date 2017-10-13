@@ -32,7 +32,7 @@ We separate the application into program and library to protect some parts of yo
 To support multiple microcontrollers you have to compile the first sketch for each target and copy the object code to the second sketch.
 
 * xxx.cpp.o.hook-atmega328p-10608 = Arduino Uno (based on ATmega328P / IDE 1.6.8)
-* xxx.cpp.o.hook-atmega328p-10804 = Arduino Uno (based on ATmega328P / IDE 1.8.4)
-* xxx.cpp.o.hook-atmega32u4-10804 = Arduino Leonardo (based on ATmega32U4 / IDE 1.8.4)
+* xxx.cpp.o.hook-atmega32u4-10608 = Arduino Leonardo (based on ATmega32U4 / IDE 1.6.8)
+* xxx.cpp.o.hook-esp8266-10608 = ESP8266 Wemos D1 mini (based on ESP8266 16 MBit / IDE 1.6.8 / SDK 2.3.0)
 
 Now you can publish the second application. Every user are able to recompile your application or replace other open source libraries with exactly the same Arduion IDE version like you. You must compile the source with the original release of each library and disable updates because of object code compartibility. In addition to that you can backup a portable IDE and include the used source of each shared library as subfolder of portable/sketchbook/libraries. At the moment I only support windows os. You can adopt IDE hook for the other operating systems.
