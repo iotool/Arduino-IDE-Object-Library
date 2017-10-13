@@ -27,7 +27,7 @@ I build an example to demonstrate the development process.
 
 You have to create two different sketches. The first sketch contain the private source code and the second sketch use the precompiled object code. To enable the Arduino IDE to compile the second sketch we have to add a dummy library.
 
-We separate the application into program and library to protect some parts of your code. The library contain all the particularly valuable code which you want to hide. Activate the compiler output at settings and compile the sketch for the target controller. At the compiler output you find a temporary build path. Copy the object file of your library "temp\sketch\privatelibrary1.cpp.o" to the second sketch and rename it to "sketchbook\privatelibrary1b\privatelibrary1.cpp.o-hook-atmega328p-10804" (atmega328p is the name of the microcontroller and 10804 the IDE version 1.8.4).
+We separate the application into program and library to protect some parts of your code. The library contain all the particularly valuable code which you want to hide. Activate the compiler output at settings and compile the sketch for the target controller. At the compiler output you find a temporary build path. Copy the object file of your library "temp\sketch\privatelibrary1.cpp.o" to the second sketch and rename it to "sketchbook\privatelibrary1b\privatelibrary1.cpp.o-hook-atmega328p-10608" (atmega328p is the name of the microcontroller and 10608 the IDE version 1.6.8).
 
 To support multiple microcontrollers you have to compile the first sketch for each target and copy the object code to the second sketch.
 
