@@ -8,7 +8,7 @@ PrivateLibrary PLib;
 
 void PrivateLibrary::init() {
   if (!Serial) {
-    Serial.begin(11520);
+    Serial.begin(115200);
     delay(10);
     Serial.println("*PLib: init()");
   }
