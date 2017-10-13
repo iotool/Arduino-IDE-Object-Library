@@ -12,9 +12,9 @@ Publish precompiled libraries for Arduino IDE (1.6.8 / 1.8.4)
 
 ## How does it works with Arduino IDE
 
-* you have to add some hooks to hardware/platform.txt
+* you have to add some hooks to [hardware/platform.txt](/iotool/Arduino-IDE-Object-Library/blob/master/hardware/platform.txt)
 * the Arduino IDE execute each hook during the build process
-* first the IDE compile a empty dummy library (cpp.o)
+* first the IDE compile a empty [dummy library](/iotool/Arduino-IDE-Object-Library/blob/master/portable/sketchbook/privatelibrary1b/privatelibrary1.cpp) (cpp.o)
 * our hook replace all dummy libraries (cpp.o.hook-mcuname)
 * second the IDE link all object codes to firmware binary
 
@@ -22,8 +22,8 @@ Publish precompiled libraries for Arduino IDE (1.6.8 / 1.8.4)
 
 I build an example to demonstrate the development process.
 
-* private version: portable/sketchbook/privatelibrary1
-* public version: portable/sketchbook/privatelibrary1b
+* private version: [portable/sketchbook/privatelibrary1](/iotool/Arduino-IDE-Object-Library/tree/master/portable/sketchbook/privatelibrary1)
+* public version: [portable/sketchbook/privatelibrary1b](/iotool/Arduino-IDE-Object-Library/tree/master/portable/sketchbook/privatelibrary1b)
 
 You have to create two different sketches. The first sketch contain the private source code and the second sketch use the precompiled object code. To enable the Arduino IDE to compile the second sketch we have to add a dummy library.
 
@@ -35,4 +35,4 @@ To support multiple microcontrollers you have to compile the first sketch for ea
 * xxx.cpp.o.hook-atmega328p-10804 = Arduino Uno (based on ATmega328P / IDE 1.8.4)
 * xxx.cpp.o.hook-atmega32u4-10804 = Arduino Leonardo (based on ATmega32U4 / IDE 1.8.4)
 
-Now you can publish the second application. Every user are able to recompile your application or replace other open source libraries with exactly the same Arduion IDE version like you. At the moment I only support windows os. You can adopt IDE hook for the other operating systems.
+Now you can publish the second application. Every user are able to recompile your application or replace other open source libraries with exactly the same Arduion IDE version like you. You must compile the source with the original release of each library and disable updates because of object code compartibility. In addition to that you can backup a portable IDE and include the used source of each shared library as subfolder of portable/sketchbook/libraries. At the moment I only support windows os. You can adopt IDE hook for the other operating systems.
