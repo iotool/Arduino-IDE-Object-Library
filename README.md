@@ -1,4 +1,4 @@
-# Arduino IDE Object-Library
+# Arduino IDE Object Library
 
 Publish precompiled libraries for Arduino IDE 1.8.4
 
