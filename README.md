@@ -15,7 +15,7 @@ Publish precompiled libraries for Arduino IDE (1.6.8 / 1.8.4)
 * you have to add some hooks to [hardware/platform.txt](https://github.com/iotool/Arduino-IDE-Object-Library/blob/master/hardware/platform.txt)
 * the Arduino IDE [execute each hook](https://github.com/iotool/Arduino-IDE-Object-Library/blob/master/portable/hook-plattform.cmd) during the build process
 * first the IDE compile a empty [dummy library](https://github.com/iotool/Arduino-IDE-Object-Library/blob/master/portable/sketchbook/privatelibrary1b/privatelibrary1.cpp) (cpp.o)
-* our hook replace all dummy libraries (cpp.o.hook-mcuname)
+* our hook replace all dummy libraries (cpp.o.hook-mcuname-ideversion)
 * second the IDE link all object codes to firmware binary
 
 ## Private Library Example
